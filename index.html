@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Loja Summer</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="menu-toggle">
+            <img src="img/icn menu.svg" alt="Menu">
+        </div>
+
+        <nav class="menu">
+            <button class="menu-close">X</button>
+            <ul class="lista-menu">
+                <li class="lista-menu__item">Home</li>
+                <li class="lista-menu__item">Shop</li>
+                <li class="lista-menu__item">Sobre</li>
+                <li class="lista-menu__item">Contato</li>
+            </ul>
+        </nav>
+
+        <div class="icones">
+            <img src="img/icn search.svg" alt="Buscar">
+            <img src="img/icn shopping-carrinho.svg" alt="Carrinho">
+        </div>
+    </header>
+    <section class="section__primary">
+        <div class="section__primary-container">
+            <h5 class="section__primary-subtitulo">SUMMER 2020</h5>
+            <h1>NOVA COLEÇÃO</h1>
+            <p>Sabemos como grandes objetos
+                irão se comportar, mas coisas em
+                pequena escala.
+            </p>
+            <a href="#">COMPRE AGORA</a> <img src="./img/none.svg" class="section__primary-banner" alt="Banner">
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+            const sectionPrimary = document.querySelector(".section__primary");
+            const menuClose = document.querySelector(".menu-close");
+
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+                sectionPrimary.classList.toggle("menu-active");
+            });
+
+            menuClose.addEventListener("click", function () {
+                menu.classList.remove("active");
+                sectionPrimary.classList.remove("menu-active");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.remove("active");
+                    sectionPrimary.classList.remove("menu-active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

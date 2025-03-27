@@ -1,0 +1,9 @@
+@import url('styles.css/header.css');
+
+:root {
+    --branco: #FFFFFF;
+    --cinza: #737373;
+    --azul: #252B42;
+    --azul-piscina: #2A7CC7;
+    --fonte-principal: "Montserrat", sans-serif;
+}
