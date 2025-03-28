@@ -132,14 +132,15 @@ body {
 /* Botão estilizado */
 .section__primary a {
     display: inline-block;
-    padding: 12px 30px;
-    font-size: 1rem;
+    padding: 18px 30px;
+    font-size: 24px;
     font-weight: bold;
     color: white;
-    background: #007bff;
-    border-radius: 30px;
+    background: #23A6F0;
+    border-radius: 10px;
     text-decoration: none;
     margin-top: 15px;
+    width: 228px;
 }
 
 .section__primary a:hover {
@@ -156,6 +157,9 @@ body {
 .section__primary-subtitulo {
     color: var(--azul-piscina);
     font-weight: bold;
+    font-size: 16px;
+    font-family: var(--fonte-principal);
+    padding: 1em;
 }
 
 /* Desktop */
